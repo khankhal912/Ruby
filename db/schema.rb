@@ -10,10 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_04_02_060359) do
-  create_table "users", force: :cascade do |t|
-    t.string "last_name", limit: 25
-    t.string "email", default: "", null: false
+ActiveRecord::Schema[7.1].define(version: 2024_04_02_091213) do
+  create_table "admin_user", force: :cascade do |t|
+    t.string "lName", limit: 25
+    t.string "email", limit: 25
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "username", limit: 25
+    t.index ["username"], name: "index_admin_user_on_username"
+  end
+
+  create_table "pages", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sections", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "subjects", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
