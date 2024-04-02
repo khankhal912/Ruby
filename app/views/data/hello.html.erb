@@ -1,0 +1,21 @@
+<h1>Hello World</h1>
+
+<%= 5+5 %>
+<% title = "rails" %>
+<%= "hello #{title}" %>
+<br>
+<br>
+<% @array.each do |single| %>
+    <%=single%> <br>
+<% end %>
+
+<a href = "/demo/index"> Hello page1</a><br>
+<%= link_to 'hello page2', {:action => 'index' }%>
+
+
+
+<%# print "How old are you ? "
+age = gets.chomp
+print "How tall are you ?"
+height = gets.chomp
+puts " You are #{age} year old and your height is #{height} cms" %>     
